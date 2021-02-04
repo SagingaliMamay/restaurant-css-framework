@@ -2,7 +2,8 @@
 # restaurant-css-framework
 # Welcome to the website of the restaurant "Dingo"
 
-[Link](https://sagingalimamay.github.io/restaurant-css-framework/4th_page/index4.html)
+[Link](https://sagingalimamay.github.io/restaurant-css-framework/welcome.html)
+
 
 
 
