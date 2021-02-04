@@ -8,7 +8,7 @@
 
 
 
- ## By creating the website, the following coding languages have been used
+ # By creating the website, the following coding languages have been used
 
  1. html
  2. css
