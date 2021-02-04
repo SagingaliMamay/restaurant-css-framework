@@ -34,3 +34,6 @@ Restaurant
 ### Restaurants
 
 - A page about the restaurants (it’s a franchise) with its addresses, a map, and different schedules.
+### Contact
+
+- A page with a contact form containing the firstname, lastname, email, subject of the message (a drop-down list with multiple options), an area for the message itself and a send button with an icon. Each entry as a title in a semantically correct tag.
