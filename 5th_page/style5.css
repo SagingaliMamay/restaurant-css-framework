@@ -1,0 +1,13 @@
+.main p
+{
+    font-size: large;
+}
+.footer{padding:20px 0px; background:#333;}
+.footer-parts-h3{ font-size:18px; font-weight:600; color:#FFF; padding:10px 0px;}
+.footer-parts-p{ color:#000; line-height:24px; text-align:justify; color:#FFF;}
+.footer-icons{list-style:none;}
+.footer-icons ul{list-style:none; padding:0px;}
+.footer-icons ul li{float:left; padding:0px 25px 0px 5px; text-transform:uppercase;}
+.footer-icons ul li a{color:#FFF; font-weight:600; font-size:18px;}
+.footer-icons ul li a:hover{ color:#CCC;}
+.footer-bottom{padding:15px; text-align:center; color:#FFF; font-size:13px; background:#000;}
