@@ -1,13 +1,9 @@
-<<<<<<< HEAD
-# Welcome to the website of the restaurant "Dingo"
 
-[Link](http://github.com/)
-=======
 # restaurant-css-framework
 # Welcome to the website of the restaurant "Dingo"
 
 [Link](https://sagingalimamay.github.io/restaurant-css-framework/4th_page/index4.html)
->>>>>>> a216ff418fef2f027f6836b7d8d5315597795b1d
+
 
 
 
@@ -54,4 +50,3 @@ Restaurant
 ### Contact
 
 - A page with a contact form containing the firstname, lastname, email, subject of the message (a drop-down list with multiple options), an area for the message itself and a send button with an icon. Each entry as a title in a semantically correct tag.
->>>>>>> a216ff418fef2f027f6836b7d8d5315597795b1d
