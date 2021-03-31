@@ -6,11 +6,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="style3.css">
+  <!--Jquery-->
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/10082/',
+        headers: {"accessKey": "YOUR_ACCESS_KEY", "secretKey": "YOUR_ACCESS_KEY"}
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Form Data Submitted :)")
+        },
+        error: function(){
+          alert("There was an error :(")
+        }
+    });
+}
+</script>
   <title>Contact</title>
 </head>
 
@@ -93,18 +111,18 @@
           <div class="contact-image">
               <img class="position-relative " src="https://image.ibb.co/kUagtU/rocket_contact.png" alt="rocket_contact"/>
           </div>
-          <form method="post">
+          <form id="myForm" action="user_procces.php" method="post">
               <h3 class="text-center" >Drop Us a Message</h3>
              <div class="row">
                   <div class="col-md-6">
                       <div class="form-group">
-                          <input type="text" name="txtName" class="form-control" placeholder="Your Name *" value="" />
+                          <input type="text" name="name"  placeholder="Your Name *" value="" />
                       </div>
                       <div class="form-group">
-                          <input type="text" name="txtEmail" class="form-control" placeholder="Your Email *" value="" />
+                          <input type="text" name="email"  placeholder="Your Email *" value="" />
                       </div>
                       <div class="form-group">
-                          <input type="text" name="txtPhone" class="form-control" placeholder="Your Phone Number *" value="" />
+                          <input type="text" name="phone"  placeholder="Your Phone Number *" value="" />
                       </div>
                       <div class="form-group">
                           <input type="submit" name="btnSubmit" class="btnContact" value="Send Message" />
@@ -112,11 +130,23 @@
                   </div>
                   <div class="col-md-6">
                       <div class="form-group">
-                          <textarea name="txtMsg" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
+                          <textarea name="message" class="form-control" placeholder="Your Message *" style="width: 100%; height: 150px;"></textarea>
                       </div>
                   </div>
               </div>
           </form>
+          <?php
+           if(isset($_Post['btnSubmit'])){
+             include_once'dbconnect.php';
+             $obj=new Contact();
+             $res=$obj->contact_us($_POST);
+             if($res==true){
+               echo"<script>alert('Query succesfully Submitted.Thank you.')</script>";
+             }else{
+               echo"<script>alert('Something went wrong!!')</script>";
+             }
+           }
+          ?>
 </div>
       </div>
     </div>
@@ -181,6 +211,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
     -->
+    <button onclick="SubForm()">Submit</button>
 </body>
 
 </html>

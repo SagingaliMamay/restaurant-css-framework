@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(208, 238, 240);
+}
+.grid-container {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.6fr 3fr 0.4fr;
+    grid-template-rows: 0.4fr 0.4fr 0.5fr 0.4fr 0.5fr 0.5fr 0.5fr 0.5fr 5.4fr;
+    gap: 0px 0px;
+    border-color: black;
+    grid-template-areas:
+    
+      "name phone email message delete"
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . ."
+      ". . . . .";
+  }
+  
+  .message { 
+      grid-area: message; 
+      background-color:rgb(248, 239, 239);
+      border-color: black;
+      border-radius: 2px;
+
+}
+  
+  .name { 
+      grid-area: name; 
+    }
+  
+  .phone { 
+      grid-area: phone; 
+    }
+  
+  .email { 
+      grid-area: email; 
+    }
+
+  
+  .delete { 
+      grid-area: delete; 
+    }
+  
+  .grid-container div{
+
+  }
